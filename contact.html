@@ -88,16 +88,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0">
-                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="index.html" class="nav-item nav-link active">Inicio</a>
                 <a href="about.html" class="nav-item nav-link">Información</a>
-                <a href="project.html" class="nav-item nav-link">Projectos</a>
-                <a href="contact.html" class="nav-item nav-link active">Contacto</a>
+                <a href="testimonial.html" class="nav-item nav-link">Testimonios</a>
+                <a href="contact.html" class="nav-item nav-link">Contacto</a>
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/SeguridadRS" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://twitter.com/SeguridadRS" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.linkedin.com/company/seguridadrs" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://www.instagram.com/SeguridadRS" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </nav>
@@ -120,60 +120,62 @@
     <!-- Page Header End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-fluid bg-light overflow-hidden px-lg-0">
-        <div class="container contact px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 ps-lg-0">
-                        <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Contáctanos</h1>
-                        </div>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Tu Nombre</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Tu Correo</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Asunto</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Mensaje</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
+<!-- Contact Start -->
+<div class="container-fluid bg-light overflow-hidden px-lg-0">
+    <div class="container contact px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 ps-lg-0">
+                    <div class="section-title text-start">
+                        <h1 class="display-5 mb-4">Contáctanos</h1>
+                    </div>
+                    <p class="mb-4">Llena el formulario a continuación para ponerte en contacto con nosotros. Te responderemos lo más pronto posible.</p>
+                    <form action="contact_process.php" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre" required>
+                                    <label for="name">Tu Nombre</label>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Tu Correo" required>
+                                    <label for="email">Tu Correo</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
+                                    <label for="subject">Asunto</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Mensaje" id="message" name="message" style="height: 100px" required></textarea>
+                                    <label for="message">Mensaje</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <iframe class="position-absolute w-100 h-100" style="object-fit: cover;"
-                        src="https://www.google.com/maps/place/Santiago,+Santiago+Metropolitan+Region/@-33.4687036,-70.8819231,10.38z/data=!4m6!3m5!1s0x9662c5410425af2f:0x8475d53c400f0931!8m2!3d-33.4488897!4d-70.6692655!16zL20vMGRscXY?entry=ttu"
-                        frameborder="0" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
+            </div>
+            <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <iframe class="position-absolute w-100 h-100" style="object-fit: cover;"
+                    src="https://www.google.com/maps/place/Santiago,+Santiago+Metropolitan+Region/@-33.4687036,-70.8819231,10.38z/data=!4m6!3m5!1s0x9662c5410425af2f:0x8475d53c400f0931!8m2!3d-33.4488897!4d-70.6692655!16zL20vMGRscXY?entry=ttu"
+                    frameborder="0" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- Contact End -->
+
     <!-- Contact End -->
 
 
